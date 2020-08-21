@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="heart"></p>
+<script>
+    for (let row = 1; row <= 29; row++){
+        if ((row > (29/2 - 2)) && (row < (29/2 + 2))){
+            document.write("&nbsp;\t");
+        }else if (row == 1 || row == 29 || row == 2 || row == 28){
+            document.write("&nbsp;\t");
+        }else {
+            document.write("*");
+        }
+    }
+    document.write("<br>");
+    for (let row = 1; row <= 29; row++){
+        if (row == 1 || row == 29){
+            document.write("&nbsp;\t");
+        }else if ((row > (29/2 - 1)) && (row < (29/2 + 1))){
+            document.write("&nbsp;\t");
+        }else {
+            document.write("*");
+        }
+    }
+    document.write("<br>");
+    for (let row = 1; row <= 29; row++){
+        document.write("*");
+    }
+    document.write("<br>");
+    for (let col = 29; col >= 1; col = col - 4){
+        for (let space = (29 - col)/2; space >= 1; space--){
+            document.write("&nbsp;\t");
+        }
+        for (let row = 1; row <= col; row++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
